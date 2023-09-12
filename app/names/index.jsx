@@ -1,6 +1,6 @@
 "use client";
 
-export default function names() {
+export default function Foo() {
   const names = [
     { firstName: "Ola", LastName: "Nordmann" },
     { firstName: "Miip", LastName: "MiipMiip" },
@@ -12,5 +12,14 @@ export default function names() {
 
   console.log(combinedNames);
 
-  return <div>names</div>;
+  return (
+    <div>
+      <h2>List of names</h2>
+      {combinedNames.map((person) => {
+        return <p key={person}>{person}</p>;
+      })}
+    </div>
+  )
 }
+
+Foo();

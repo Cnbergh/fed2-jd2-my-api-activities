@@ -2,8 +2,8 @@
 
 export default function Foo() {
   const names = [
-    { firstName: "Ola", LastName: "Nordmann" },
-    { firstName: "Miip", LastName: "MiipMiip" },
+    { firstName: "Ola", LastName: "Nordmann", isStudent: true, goingToMuseum: true },
+    { firstName: "Miip", LastName: "MiipMiip", isStudent: false, goingToMuseum: false },
   ];
 
   const combinedNames = names.map((person) => {
@@ -11,6 +11,17 @@ export default function Foo() {
   });
 
   console.log(combinedNames);
+
+  const students = names.filter((person) => person.isStudent);
+
+  console.warn('students >>>', students);
+
+  const pplGoingToTheMuseum = names
+    .filter((person) => person.isStudent)
+    .filter((person) => person.goingToMuseum)
+    .map((person) => console.warn(`${person.firstName} is going to the Museum`));
+
+  console.warn('pplGoingToTheMuseum >>>', pplGoingToTheMuseum);
 
   return (
     <div>

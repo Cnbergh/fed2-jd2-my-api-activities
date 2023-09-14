@@ -1,4 +1,5 @@
 import { Faker } from "@faker-js/faker";
+
 function createRandomUser() {
     const sex = faker.person.sexType();
     const firstName = faker.person.firstName(sex);
@@ -34,3 +35,4 @@ export default function PeopleList() {
         </div>
     );
 }
+

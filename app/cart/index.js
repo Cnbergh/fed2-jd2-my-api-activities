@@ -33,15 +33,15 @@ for (let index = 0; index <= 2; index++) {
   console.log(ingredient);
 
   for (const item in recipe) {
-    console.log("using for in >>>", `${item}: ${recipe[item]}`);
+    console.log("using for in >>", `${item}: ${recipe[item]}`);
   }
   console.log(Object.keys(recipe));
 
   Object.keys(recipe).map((key) => {
-    console.log("using map >>>", recipe[key]);
+    console.log("using map >>", recipe[key]);
   });
 
   Object.entries(recipe).map(([key, value]) => {
-    console.warn(`using entries >>> key: ${key}, value: ${value}`);
+    console.warn(`using entries >> key: ${key}, value: ${value}`);
   });
 }

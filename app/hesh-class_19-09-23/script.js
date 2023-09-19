@@ -124,3 +124,16 @@ const totalSum = chocolates.reduce(
 );
 
 console.log("totalSum: ", totalSum);
+
+//q6 - make it full array
+
+const arrays = [
+  [1, 2, 3],
+  [4, 5],
+  [6, 7, 8, 9],
+];
+//[1,2,3,4,5,6,7,8,9]
+
+const fullArray = arrays.reduce((acc, currentArray) => {
+  return acc.concat(currentArray);
+}, []);

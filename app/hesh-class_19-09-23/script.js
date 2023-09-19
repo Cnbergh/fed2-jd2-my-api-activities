@@ -108,3 +108,19 @@ const cart = [
 const filteredCart = cart.filter((item) => item.inStock && item.price <= 50);
 
 console.log(filteredCart);
+
+//q5 - box of chocolates is maybe an array of numbers - get the total number of chocolates
+
+const chocolates = [1, 2, 3, 4, 5];
+// 0 + 1 = 1
+// 1 + 2 = 3
+// 3 + 3 = 6
+// 6 + 4 = 10
+// 10 + 5 = 15
+
+const totalSum = chocolates.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+
+console.log("totalSum: ", totalSum);
